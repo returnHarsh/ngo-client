@@ -3,7 +3,7 @@ import UseStateHook from '../hooks/UseStateHook'
 
 const Gallery = () => {
 
-    const{data , dataLoading} = UseStateHook("http://localhost:8080/api/gallery");
+    const{data , dataLoading} = UseStateHook(`${process.env.REACT_APP_BACKEND_URL}/api/gallery`);
 
   return (
     <div>

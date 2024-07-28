@@ -5,7 +5,7 @@ import PaginationFooter from './PaginationFooter';
 
 const Blogs = () => {
 
-    const{data , dataLoading} = UseStateHook("http://localhost:8080/api/blogs");
+    const{data , dataLoading} = UseStateHook(`${process.env.REACT_APP_BACKEND_URL}/api/blogs`);
     const[page , setPage] = useState(1);
 
     

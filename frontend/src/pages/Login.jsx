@@ -92,7 +92,7 @@ function Login() {
         try {
             setLoginLoading(true);
             const res = await axios({
-                url: "http://localhost:8080/api/admin/login",
+                url: `${process.env.REACT_APP_BACKEND_URL}/api/admin/login`,
                 method: "post",
                 data: { email: loginDetails.email, password: loginDetails.password },
                 headers: {

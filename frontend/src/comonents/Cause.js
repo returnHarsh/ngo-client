@@ -9,7 +9,7 @@ import { format, formatDistanceToNow } from 'date-fns';
 
 const Cause = () => {
 
-  const { data, dataLoading } = UseStateHook("http://localhost:8080/api/cause");
+  const { data, dataLoading } = UseStateHook(`${process.env.REACT_APP_BACKEND_URL}/api/cause`);
   const [page, setPage] = useState(1);
 
   return (

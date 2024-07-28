@@ -23,7 +23,7 @@ const Causes = () => {
       try{
 
         const res = await axios({
-          url : "http://localhost:8080/api/cause",
+          url : `${process.env.REACT_APP_BACKEND_URL}/api/cause`,
           method : "get",
         })
 
@@ -62,7 +62,7 @@ const Causes = () => {
     try{
 
       const res = await axios({
-        url : `http://localhost:8080/api/cause/${cause._id}`,
+        url : `${process.env.REACT_APP_BACKEND_URL}/api/cause/${cause._id}`,
         method : "delete",
         headers : {
           'Authorization': `Bearer ${token}`

@@ -6,7 +6,7 @@ import Footer from './footer';
 
 const Events = () => {
 
-  const{data , dataLoading} = UseStateHook("http://localhost:8080/api/events");
+  const{data , dataLoading} = UseStateHook(`${process.env.REACT_APP_BACKEND_URL}/api/events`);
   const[page , setPage] = useState(1);
 
 

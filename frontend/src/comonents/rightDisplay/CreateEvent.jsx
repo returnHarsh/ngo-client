@@ -118,7 +118,7 @@ const CreateEvent = ({ setTotalEvents , setEvents }) => {
             formData.append("endTime" , JSON.stringify({...endTime , period : endTimePeriodRef.current.value}) );
 
             const res = await axios({
-                url : "http://localhost:8080/api/create/event",
+                url : `${process.env.REACT_APP_BACKEND_URL}/api/create/event`,
                 method : "post",
                 data : formData,
                 headers : {
